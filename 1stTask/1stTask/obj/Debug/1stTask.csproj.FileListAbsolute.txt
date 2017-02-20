@@ -1,0 +1,6 @@
+c:\users\maole\documents\visual studio 2015\Projects\1stTask\1stTask\bin\Debug\1stTask.exe.config
+c:\users\maole\documents\visual studio 2015\Projects\1stTask\1stTask\bin\Debug\1stTask.exe
+c:\users\maole\documents\visual studio 2015\Projects\1stTask\1stTask\bin\Debug\1stTask.pdb
+c:\users\maole\documents\visual studio 2015\Projects\1stTask\1stTask\obj\Debug\1stTask.csprojResolveAssemblyReference.cache
+c:\users\maole\documents\visual studio 2015\Projects\1stTask\1stTask\obj\Debug\1stTask.exe
+c:\users\maole\documents\visual studio 2015\Projects\1stTask\1stTask\obj\Debug\1stTask.pdb
