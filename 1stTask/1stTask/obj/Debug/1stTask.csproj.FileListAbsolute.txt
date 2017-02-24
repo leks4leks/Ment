@@ -4,3 +4,13 @@ c:\users\maole\documents\visual studio 2015\Projects\1stTask\1stTask\bin\Debug\1
 c:\users\maole\documents\visual studio 2015\Projects\1stTask\1stTask\obj\Debug\1stTask.csprojResolveAssemblyReference.cache
 c:\users\maole\documents\visual studio 2015\Projects\1stTask\1stTask\obj\Debug\1stTask.exe
 c:\users\maole\documents\visual studio 2015\Projects\1stTask\1stTask\obj\Debug\1stTask.pdb
+C:\Users\Maole\documents\visual studio 2015\Projects\1stTask\1stTask\bin\Debug\CsQuery.dll
+C:\Users\Maole\documents\visual studio 2015\Projects\1stTask\1stTask\bin\Debug\CsQuery.xml
+E:\Git\Ment\Ment\1stTask\1stTask\bin\Debug\1stTask.exe.config
+E:\Git\Ment\Ment\1stTask\1stTask\bin\Debug\1stTask.exe
+E:\Git\Ment\Ment\1stTask\1stTask\bin\Debug\1stTask.pdb
+E:\Git\Ment\Ment\1stTask\1stTask\bin\Debug\CsQuery.dll
+E:\Git\Ment\Ment\1stTask\1stTask\bin\Debug\CsQuery.xml
+E:\Git\Ment\Ment\1stTask\1stTask\obj\Debug\1stTask.csprojResolveAssemblyReference.cache
+E:\Git\Ment\Ment\1stTask\1stTask\obj\Debug\1stTask.exe
+E:\Git\Ment\Ment\1stTask\1stTask\obj\Debug\1stTask.pdb
