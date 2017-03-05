@@ -1,0 +1,60 @@
+﻿
+@model MainModel
+@{
+    ViewBag.Title = "User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>User</h2>
+
+@using (Html.BeginForm("Add", "User", FormMethod.Post))
+{
+
+    <div id="AddUsers">
+        <table style="width:40%">
+            <tr>
+                <td>
+                    Name:
+                    <input type="text" width="20" class="text-info" name="model.AddedUser.Name" />
+                </td>
+                <td>
+                    BDay date:
+                    <input type="date" width="10" class="date" name="model.AddedUser.BDay" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" class="btn-default" style="margin:5px 0px 0px 0px">Add User</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <hr />
+    <div id="UsersList">
+        <table style="width:45%">
+            <tr>
+                <th>Name</th>
+                <th>Day of BDay</th>
+                <th>Age</th>
+            </tr>
+            @if (Model != null)
+            {
+                if (Model.Users != null)
+                {
+                    foreach (var item in Model.Users)
+                    {
+                        <tr>                            
+                            <td>@item.Name</td>
+                            <td>@item.BDay</td>
+                            <td>@item.Age</td>
+                        </tr>
+                    }
+                }
+            }
+        </table>
+    </div>
+}
+
+
+
+    
