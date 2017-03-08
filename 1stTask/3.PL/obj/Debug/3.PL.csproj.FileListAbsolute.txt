@@ -61,3 +61,7 @@ E:\Git\Ment\Ment\1stTask\3.PL\bin\System.Web.Optimization.dll
 E:\Git\Ment\Ment\1stTask\3.PL\bin\WebGrease.dll
 E:\Git\Ment\Ment\1stTask\3.PL\bin\Antlr3.Runtime.pdb
 E:\Git\Ment\Ment\1stTask\3.PL\bin\System.Web.Optimization.xml
+E:\Git\Ment\Ment\1stTask\3.PL\bin\3.BLL.dll
+E:\Git\Ment\Ment\1stTask\3.PL\bin\3.DAL.dll
+E:\Git\Ment\Ment\1stTask\3.PL\bin\3.BLL.pdb
+E:\Git\Ment\Ment\1stTask\3.PL\bin\3.DAL.pdb

@@ -1,8 +1,68 @@
 ﻿
+@model MainModel
 @{
     ViewBag.Title = "Reward";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>REWARD</h2>
+<h2>User</h2>
+
+@using (Html.BeginForm("Add", "Reward", FormMethod.Post))
+{
+
+    <div id="AddUsers">
+        <table style="width:40%">
+            <tr>
+                <td>
+                    Title:
+                    <input type="text" width="20" class="text-info" name="model.AddedReward.Title" />
+                </td>
+                <td>
+                    Desc:
+                    <input type="text" width="20" class="text-info" name="model.AddedReward.Description" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" class="btn btn-info" style="margin:5px 0px 0px 0px">Add Reward</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <hr />
+    <div id="UsersList">
+        <table style="width:45%">
+            <tr>
+                <th></th>
+                <th>Title</th>
+                <th>Description</th>
+            </tr>
+            @if (Model != null)
+            {
+                if (Model.Rewards != null)
+                {
+                    foreach (var item in Model.Rewards)
+                    {
+                        <tr>
+                            <td>
+                                @Html.ActionLink(
+                                  "Del",
+                                  "Del",
+                                  "Reward",
+                                  new { item.Id },
+                                  new { @class = "btn btn-info" }) 
+                        </td>
+                        <td>@item.Title</td>
+                        <td>@item.Description</td>
+                    </tr>
+                    }
+                }
+            }
+        </table>
+    </div>
+}
+
+
+
+
 

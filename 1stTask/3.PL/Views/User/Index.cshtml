@@ -24,7 +24,7 @@
             </tr>
             <tr>
                 <td>
-                    <button type="submit" class="btn-default" style="margin:5px 0px 0px 0px">Add User</button>
+                    <button type="submit" class="btn btn-info" style="margin:5px 0px 0px 0px">Add User</button>
                 </td>
             </tr>
         </table>
@@ -33,6 +33,7 @@
     <div id="UsersList">
         <table style="width:45%">
             <tr>
+                <th></th>
                 <th>Name</th>
                 <th>Day of BDay</th>
                 <th>Age</th>
@@ -43,7 +44,14 @@
                 {
                     foreach (var item in Model.Users)
                     {
-                        <tr>                            
+                        <tr>              
+                            <td>@Html.ActionLink(
+                                   "Del",
+                                   "Del",                         
+                                   "User",        
+                                   new { item.Id },        
+                                   new { @class = "btn btn-info" }) 
+                            </td>              
                             <td>@item.Name</td>
                             <td>@item.BDay</td>
                             <td>@item.Age</td>
