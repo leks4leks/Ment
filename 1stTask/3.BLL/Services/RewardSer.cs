@@ -10,13 +10,14 @@ namespace _3.BLL.Services
 {
     public class RewardSer
     {
-        public List<RewardModel> getReward()
+        public ListReward GetReward()
         {
             RewardAcc us = new RewardAcc();
-            var res = new List<RewardModel>();
-            foreach (var item in us.getReward())
+            var res = new ListReward();
+            res.Rewards = new List<RewardModel>();
+            foreach (var item in us.GetReward())
             {
-                res.Add(new RewardModel()
+                res.Rewards.Add(new RewardModel()
                 {
                     Id = item.Id,
                     Title = item.Title,
@@ -27,16 +28,16 @@ namespace _3.BLL.Services
             return res;
         }
 
-        public bool addReward(string title, string desc)
+        public bool AddReward(string title, string desc)
         {
             RewardAcc us = new RewardAcc();
-            return us.addReward(title, desc);           
+            return us.AddReward(title, desc);           
         }
 
-        public bool delReward(int id)
+        public bool DelReward(int id)
         {
             RewardAcc us = new RewardAcc();
-            return us.delReward(id);
+            return us.DelReward(id);
         }
     }
 }

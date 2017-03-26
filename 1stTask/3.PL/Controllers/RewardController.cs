@@ -1,48 +1,32 @@
-﻿using _3.PL.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using _3.BLL.Models;
+﻿using System.Web.Mvc;
 using _3.BLL.Services;
+using _3.PL.Models;
 
 namespace _3.PL.Controllers
 {
     public class RewardController : Controller
     {
-        public static MainModel stModel;
+        public static ReModel ReModel = new ReModel();
 
         public ActionResult Index()
         {
-            stModel = new MainModel();
             loadRewards();
-            return View(stModel);
+            return View(ReModel);
         }
         public void loadRewards()
         {
             RewardSer ser = new RewardSer();
-            stModel.Rewards = ser.getReward();
-        }
-
-        [System.Web.Http.HttpPost]
-        public ActionResult Add(MainModel model)
-        {
-            RewardSer ser = new RewardSer();
-            if (model.AddedReward != null)
-                ser.addReward(model.AddedReward.Title, model.AddedReward.Description);
-            loadRewards();
-            return View("Index", stModel);
+            ReModel.Rewards = ser.GetReward().Rewards;
         }
 
         [System.Web.Http.HttpPost]
         public ActionResult Del(int id)
         {
             RewardSer ser = new RewardSer();
-            if (stModel.Rewards != null)
-                ser.delReward(id);
+            if (ReModel.Rewards != null)
+                ser.DelReward(id);
             loadRewards();
-            return View("Index", stModel);
+            return View("Reward", "Index", ReModel);
         }
     }
 }

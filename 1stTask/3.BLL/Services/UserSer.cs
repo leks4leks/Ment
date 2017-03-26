@@ -8,15 +8,17 @@ using System.Web;
 
 namespace _3.BLL.Services
 {
+ 
     public class UserSer
     {
-        public List<UserModel> getUser()
+        public ListUsers GetUser()
         {
             UserAcc us = new UserAcc();
-            var res = new List<UserModel>();
-            foreach (var item in us.getUsers())
+            var res = new ListUsers();
+            res.Users = new List<UserModel>();
+            foreach (var item in us.GetUsers())
             {
-                res.Add(new UserModel()
+                res.Users.Add(new UserModel()
                 {
                     Id = item.Id,
                     Name = item.Name,
@@ -28,16 +30,16 @@ namespace _3.BLL.Services
             return res;
         }
 
-        public bool addUser(string name, DateTime? bday)
+        public bool AddUser(string name, DateTime? bday)
         {
             UserAcc us = new UserAcc();
-            return us.addUsers(name, bday);           
+            return us.AddUsers(name, bday);           
         }
 
-        public bool delUser(int id)
+        public bool DelUser(int id)
         {
             UserAcc us = new UserAcc();
-            return us.delUsers(id);
+            return us.DelUsers(id);
         }
     }
 }

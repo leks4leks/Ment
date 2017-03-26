@@ -32,6 +32,5 @@ E:\Git\Ment\Ment\1stTask\3.DAL\bin\Microsoft.AI.Web.xml
 E:\Git\Ment\Ment\1stTask\3.DAL\bin\Microsoft.AI.WindowsServer.xml
 E:\Git\Ment\Ment\1stTask\3.DAL\bin\Microsoft.ApplicationInsights.xml
 E:\Git\Ment\Ment\1stTask\3.DAL\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\Git\Ment\Ment\1stTask\3.DAL\obj\Debug\3.DAL.csprojResolveAssemblyReference.cache
 E:\Git\Ment\Ment\1stTask\3.DAL\obj\Debug\3.DAL.dll
 E:\Git\Ment\Ment\1stTask\3.DAL\obj\Debug\3.DAL.pdb

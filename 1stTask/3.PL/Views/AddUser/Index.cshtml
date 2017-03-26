@@ -1,0 +1,31 @@
+﻿
+@model User
+@{
+    ViewBag.Title = "Add User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add</h2>
+@using (Html.BeginForm("Add", "AddUser", FormMethod.Post))
+{
+    <div id="AddUsers">
+        <table style="width:40%">
+                <tr>
+                    <td>
+                        Name:
+                        <input type="text" width="20" class="text-info" name="Model.Name" />
+                    </td>
+                    <td>
+                        BDay date:
+                        <input type="date" width="10" class="date" name="Model.BDay" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit" class="btn btn-info" style="margin:5px 0px 0px 0px">Add User</button>
+                    </td>
+                </tr>
+            </table>
+    </div>
+}
+

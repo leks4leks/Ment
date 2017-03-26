@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _3.BLL.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -6,6 +7,11 @@ using System.Web;
 
 namespace _3.BLL.Models
 {
+    public class ListUsers
+    {
+        public List<UserModel> Users { get; set; }
+    }
+
     public class UserModel
     {
         public long Id { get; set; }
@@ -22,4 +28,6 @@ namespace _3.BLL.Models
         public int Age { get; set; }
         
     }
+
+  
 }

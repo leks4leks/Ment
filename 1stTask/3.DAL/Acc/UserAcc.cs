@@ -9,7 +9,7 @@ namespace _3.BLL.Acc
 {
     public class UserAcc
     {
-        public List<User> getUsers()
+        public List<User> GetUsers()
         {
             using (Entities ent = new Entities())
             {
@@ -17,7 +17,7 @@ namespace _3.BLL.Acc
             }
         }
 
-        public bool addUsers(string name, DateTime? bday)
+        public bool AddUsers(string name, DateTime? bday)
         {
             using (Entities ent = new Entities())
             {
@@ -26,7 +26,7 @@ namespace _3.BLL.Acc
                 return true;
             }
         }
-        public bool delUsers(int id)
+        public bool DelUsers(int id)
         {
             using (Entities ent = new Entities())
             {

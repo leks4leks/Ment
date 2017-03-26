@@ -6,6 +6,10 @@ using System.Web;
 
 namespace _3.BLL.Models
 {
+    public class ListReward
+    {
+        public List<RewardModel> Rewards { get; set; }
+    }
     public class RewardModel
     {
         public long Id { get; set; }

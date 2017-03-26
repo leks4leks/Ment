@@ -9,7 +9,7 @@ namespace _3.BLL.Acc
 {
     public class RewardAcc
     {
-        public List<Reward> getReward()
+        public List<Reward> GetReward()
         {
             using (Entities ent = new Entities())
             {
@@ -17,7 +17,7 @@ namespace _3.BLL.Acc
             }
         }
 
-        public bool addReward(string title, string desc)
+        public bool AddReward(string title, string desc)
         {
             using (Entities ent = new Entities())
             {
@@ -26,7 +26,7 @@ namespace _3.BLL.Acc
                 return true;
             }
         }
-        public bool delReward(int id)
+        public bool DelReward(int id)
         {
             using (Entities ent = new Entities())
             {
