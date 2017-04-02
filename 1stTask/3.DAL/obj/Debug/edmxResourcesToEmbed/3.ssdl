@@ -7,6 +7,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Title" Type="varchar(max)" Nullable="false" />
     <Property Name="Description " Type="varchar(max)" Nullable="false" />
+    <Property Name="FilePath" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="Users">
     <Key>
@@ -16,6 +17,7 @@
     <Property Name="Name" Type="varchar(max)" Nullable="false" />
     <Property Name="Birthdate" Type="datetime" />
     <Property Name="Age" Type="int" Nullable="false" />
+    <Property Name="FilePath" Type="varchar(max)" />
   </EntityType>
   <EntityContainer Name="DBModelStoreContainer">
     <EntitySet Name="Reward" EntityType="Self.Reward" Schema="dbo" store:Type="Tables" />

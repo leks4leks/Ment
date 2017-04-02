@@ -10,18 +10,19 @@ namespace _3.BLL.Services
 {
     public class RewardSer
     {
-        public ListReward GetReward()
+        public ListReward GetReward(long? id = null)
         {
             RewardAcc us = new RewardAcc();
             var res = new ListReward();
             res.Rewards = new List<RewardModel>();
-            foreach (var item in us.GetReward())
+            foreach (var item in us.GetReward(id))
             {
                 res.Rewards.Add(new RewardModel()
                 {
                     Id = item.Id,
                     Title = item.Title,
-                    Description = item.Description_
+                    Description = item.Description_,
+                    FilePath = "/Images/" + item.FilePath
                 });
             }
 
@@ -33,11 +34,21 @@ namespace _3.BLL.Services
             RewardAcc us = new RewardAcc();
             return us.AddReward(title, desc);           
         }
+        public bool UpdateReward(RewardModel model)
+        {
+            RewardAcc us = new RewardAcc();
+            return us.UpdateReward(model.Id, model.Description, model.Title);
+        }
 
         public bool DelReward(int id)
         {
             RewardAcc us = new RewardAcc();
             return us.DelReward(id);
+        }
+        public bool AddRewardImage(RewardModel model)
+        {
+            RewardAcc us = new RewardAcc();
+            return us.AddRewardImage(model.Id, model.FilePath);
         }
     }
 }

@@ -26,7 +26,10 @@ namespace _3.BLL.Models
 
         [Display(Name = "Age")]
         public int Age { get; set; }
-        
+
+        [Display(Name = "FilePath")]
+        public string FilePath { get; set; }
+
     }
 
   

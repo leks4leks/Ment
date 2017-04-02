@@ -28,5 +28,15 @@ namespace _3.PL.Controllers
             loadRewards();
             return View("Reward", "Index", ReModel);
         }
+
+        [System.Web.Http.HttpPost]
+        public ActionResult Edit(int id)
+        {
+            RewardSer ser = new RewardSer();
+            if (ReModel != null)
+                ser.GetReward(id);
+
+            return View("Index", "WorkWithReward", ser);
+        }
     }
 }

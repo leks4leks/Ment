@@ -22,6 +22,8 @@ namespace _3.BLL.Models
         [Display(Name = "Description ")]
         public string Description { get; set; }
         
-        
+        [Display(Name = "FilePath")]
+        public string FilePath { get; set; }
+
     }
 }

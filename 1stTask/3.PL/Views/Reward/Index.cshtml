@@ -2,15 +2,13 @@
 @model ReModel
 @{
     ViewBag.Title = "Reward";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/RewardLayout.cshtml";
 }
-
-<h2>User</h2>
 
 <div id="AddReward">
 
     <button class="btn btn-info" type="button" id="addUser"
-            onclick="location.href='@Url.Action("Index", "AddReward")'">
+            onclick="location.href='@Url.Action("Index", "WorkWithReward")'">
         Add Reward
     </button>
 </div>
@@ -20,8 +18,10 @@
     <table style="width:45%">
         <tr>
             <th></th>
+            <th></th>
             <th>Title</th>
             <th>Description</th>
+            <th>Image</th>
         </tr>
         @if (Model != null)
         {
@@ -38,8 +38,17 @@
                                 new { item.Id },
                                 new { @class = "btn btn-info" }) 
                     </td>
+                    <td>
+                        @Html.ActionLink(
+                            "Edit",
+                            "Index",
+                            "WorkWithReward",
+                            new { item.Id },
+                            new { @class = "btn btn-info" })
+                    </td>             
                     <td>@item.Title</td>
                     <td>@item.Description</td>
+                    <td><img src="@item.FilePath" width="50" height="50"/>
                 </tr>
                 }
             }
@@ -48,7 +57,6 @@
 </div>
 
 
-
-
-
-
+@section side {
+    <strong> /Reward</strong>
+}

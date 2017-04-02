@@ -12,6 +12,5 @@ namespace _3.PL.Models
     }
     public class User : UserModel
     {
-
     }
 }

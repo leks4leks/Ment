@@ -2,26 +2,28 @@
 @model UsModel
 @{
     ViewBag.Title = "User";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
 }
-
-<h2>User</h2>
-
-
 
 <div id="AddUsers">
 
     <button class="btn btn-info" type="button" id="addUser"
-            onclick="location.href='@Url.Action("Index", "AddUser")'">Add User</button>
+            onclick="location.href='@Url.Action("Index", "WorkWithUser")'">Add User</button>
+    @using (Html.BeginForm("Download", "User", FormMethod.Post))
+    {
+        <button type="submit" class="btn btn-info" style="margin:5px 0px 0px 0px">Download User</button>
+    }
 </div>
 <hr />
 <div id="UsersList">
     <table style="width:45%">
         <tr>
             <th></th>
+            <th></th>
             <th>Name</th>
             <th>Day of BDay</th>
             <th>Age</th>
+            <th>Image</th>
         </tr>
         @if (Model != null)
         {
@@ -36,10 +38,20 @@
                                 "User",        
                                 new { item.Id },        
                                 new { @class = "btn btn-info" }) 
-                        </td>              
+                        </td>    
+                        <td>
+                            @Html.ActionLink(
+                                "Edit",
+                                "Index",
+                                "WorkWithUser",
+                                new { item.Id },
+                                new { @class = "btn btn-info" })
+                        </td>                              
                         <td>@item.Name</td>
                         <td>@item.BDay</td>
                         <td>@item.Age</td>
+                        <td><img src="@item.FilePath" width="50" height="50"/>
+ </td>
                     </tr>
                 }
             }
@@ -47,6 +59,10 @@
     </table>
 </div>
 
+
+@section side {
+    <strong> /User</strong>
+}
 
 
 

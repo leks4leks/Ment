@@ -18,5 +18,6 @@ namespace _3.DAL
         public string Name { get; set; }
         public Nullable<System.DateTime> Birthdate { get; set; }
         public int Age { get; set; }
+        public string FilePath { get; set; }
     }
 }

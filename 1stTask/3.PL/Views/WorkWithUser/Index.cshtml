@@ -1,0 +1,62 @@
+﻿
+@model User
+@{
+    ViewBag.Title = "Add User";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+@using (Html.BeginForm("Add", "WorkWithUser", FormMethod.Post))
+{
+    <div id="AddUsers">
+        <table style="width:40%">
+                <tr>                      
+                    <td>
+                        Name:
+                        <input type="text" width="20" class="text-info" name="Model.Name" value="@Model.Name" />
+                    </td>
+                    <td>
+                        BDay date:
+                        <input type="date" width="10" class="date" name="Model.BDay" value="@Model.BDay"/>
+                        <input type="hidden" width="20" class="text-info" name="Model.Id" value="@Model.Id" />
+                    </td>                    
+                </tr>               
+                <tr>
+                    <td>
+                        <button type="submit" class="btn btn-info" style="margin:5px 0px 0px 0px">Add/Edit User</button>
+                    </td>
+                </tr>   
+            
+            </table>
+    </div>
+}
+<br/>
+@if (Model.Id != 0)
+{
+    using (Html.BeginForm("AddUserImage", "WorkWithUser", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div id="AddUserImage">
+            <table style="width:40%">
+                <tr>
+                    <td>
+                        <input type="file" name="file" class="btn btn-warning" />
+                        <input type="hidden" width="20" class="text-info" name="Model.Id" value="@Model.Id" />
+                    </td>
+                    <td rowspan="2">
+                        <img src="@Model.FilePath" width="85" height="85" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit" class="btn btn-info" style="margin:5px 0px 0px 0px; width:150px">Add Image</button>
+                        <button type="submit" class="btn btn-danger" style="margin:5px 0px 0px 0px">Delete exist Image</button>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    }
+}
+
+@section side {
+    <strong> /User/Add&Edit User</strong>
+}

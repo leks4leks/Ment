@@ -1,8 +1,8 @@
 E:\Git\Ment\Ment\1stTask\2ndTask\bin\Debug\2ndTask.exe.config
 E:\Git\Ment\Ment\1stTask\2ndTask\bin\Debug\2ndTask.exe
 E:\Git\Ment\Ment\1stTask\2ndTask\bin\Debug\2ndTask.pdb
-E:\Git\Ment\Ment\1stTask\2ndTask\obj\Debug\2ndTask.exe
-E:\Git\Ment\Ment\1stTask\2ndTask\obj\Debug\2ndTask.pdb
 E:\Git\Ment\Ment\1stTask\2ndTask\bin\Debug\Mime.dll
 E:\Git\Ment\Ment\1stTask\2ndTask\bin\Debug\MimeTypesMap.dll
 E:\Git\Ment\Ment\1stTask\2ndTask\obj\Debug\2ndTask.csprojResolveAssemblyReference.cache
+E:\Git\Ment\Ment\1stTask\2ndTask\obj\Debug\2ndTask.exe
+E:\Git\Ment\Ment\1stTask\2ndTask\obj\Debug\2ndTask.pdb

@@ -34,3 +34,4 @@ E:\Git\Ment\Ment\1stTask\3.DAL\bin\Microsoft.ApplicationInsights.xml
 E:\Git\Ment\Ment\1stTask\3.DAL\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 E:\Git\Ment\Ment\1stTask\3.DAL\obj\Debug\3.DAL.dll
 E:\Git\Ment\Ment\1stTask\3.DAL\obj\Debug\3.DAL.pdb
+E:\Git\Ment\Ment\1stTask\3.DAL\obj\Debug\3.DAL.csprojResolveAssemblyReference.cache

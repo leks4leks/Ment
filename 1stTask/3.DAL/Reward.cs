@@ -17,5 +17,6 @@ namespace _3.DAL
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description_ { get; set; }
+        public string FilePath { get; set; }
     }
 }

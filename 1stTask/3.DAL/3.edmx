@@ -12,6 +12,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Title" Type="varchar(max)" Nullable="false" />
           <Property Name="Description " Type="varchar(max)" Nullable="false" />
+          <Property Name="FilePath" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -21,6 +22,7 @@
           <Property Name="Name" Type="varchar(max)" Nullable="false" />
           <Property Name="Birthdate" Type="datetime" />
           <Property Name="Age" Type="int" Nullable="false" />
+          <Property Name="FilePath" Type="varchar(max)" />
         </EntityType>
         <EntityContainer Name="DBModelStoreContainer">
           <EntitySet Name="Reward" EntityType="Self.Reward" Schema="dbo" store:Type="Tables" />
@@ -42,6 +44,7 @@
           <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Birthdate" Type="DateTime" Precision="3" />
           <Property Name="Age" Type="Int32" Nullable="false" />
+          <Property Name="FilePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Reward">
           <Key>
@@ -50,6 +53,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Description_" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FilePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -60,6 +64,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="DBModel.User">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="FilePath" ColumnName="FilePath" />
                 <ScalarProperty Name="Age" ColumnName="Age" />
                 <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -70,6 +75,7 @@
           <EntitySetMapping Name="Rewards">
             <EntityTypeMapping TypeName="DBModel.Reward">
               <MappingFragment StoreEntitySet="Reward">
+                <ScalarProperty Name="FilePath" ColumnName="FilePath" />
                 <ScalarProperty Name="Description_" ColumnName="Description " />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Id" ColumnName="Id" />

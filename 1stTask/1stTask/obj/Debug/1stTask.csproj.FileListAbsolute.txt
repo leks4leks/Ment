@@ -11,6 +11,6 @@ E:\Git\Ment\Ment\1stTask\1stTask\bin\Debug\1stTask.exe
 E:\Git\Ment\Ment\1stTask\1stTask\bin\Debug\1stTask.pdb
 E:\Git\Ment\Ment\1stTask\1stTask\bin\Debug\CsQuery.dll
 E:\Git\Ment\Ment\1stTask\1stTask\bin\Debug\CsQuery.xml
+E:\Git\Ment\Ment\1stTask\1stTask\obj\Debug\1stTask.csprojResolveAssemblyReference.cache
 E:\Git\Ment\Ment\1stTask\1stTask\obj\Debug\1stTask.exe
 E:\Git\Ment\Ment\1stTask\1stTask\obj\Debug\1stTask.pdb
-E:\Git\Ment\Ment\1stTask\1stTask\obj\Debug\1stTask.csprojResolveAssemblyReference.cache

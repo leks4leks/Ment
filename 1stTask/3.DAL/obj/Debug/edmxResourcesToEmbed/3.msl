@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="DBModel.User">
         <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
           <ScalarProperty Name="Age" ColumnName="Age" />
           <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -14,6 +15,7 @@
     <EntitySetMapping Name="Rewards">
       <EntityTypeMapping TypeName="DBModel.Reward">
         <MappingFragment StoreEntitySet="Reward">
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
           <ScalarProperty Name="Description_" ColumnName="Description " />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Id" ColumnName="Id" />

@@ -11,19 +11,20 @@ namespace _3.BLL.Services
  
     public class UserSer
     {
-        public ListUsers GetUser()
+        public ListUsers GetUser(long? id = null)
         {
             UserAcc us = new UserAcc();
             var res = new ListUsers();
             res.Users = new List<UserModel>();
-            foreach (var item in us.GetUsers())
+            foreach (var item in us.GetUsers(id))
             {
                 res.Users.Add(new UserModel()
                 {
                     Id = item.Id,
                     Name = item.Name,
                     BDay = item.Birthdate,
-                    Age = item.Age
+                    Age = item.Age,
+                    FilePath = "/Images/" + item.FilePath
                 });
             }
 
@@ -34,6 +35,16 @@ namespace _3.BLL.Services
         {
             UserAcc us = new UserAcc();
             return us.AddUsers(name, bday);           
+        }
+        public bool UpdateUser(UserModel model)
+        {
+            UserAcc us = new UserAcc();
+            return us.UpdateUsers(model.Id, model.Name, model.BDay);
+        }
+        public bool AddUserImage(UserModel model)
+        {
+            UserAcc us = new UserAcc();
+            return us.AddUsersImage(model.Id, model.FilePath);
         }
 
         public bool DelUser(int id)

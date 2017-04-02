@@ -9,11 +9,11 @@ namespace _3.BLL.Acc
 {
     public class RewardAcc
     {
-        public List<Reward> GetReward()
+        public List<Reward> GetReward(long? id = null)
         {
             using (Entities ent = new Entities())
             {
-                return ent.Rewards.ToList();
+                return ent.Rewards.Where(_ => id ==null || _.Id == id).ToList();
             }
         }
 
@@ -26,11 +26,30 @@ namespace _3.BLL.Acc
                 return true;
             }
         }
+        public bool UpdateReward(long id, string desc, string title)
+        {
+            using (Entities ent = new Entities())
+            {
+                ent.Rewards.Where(_ => _.Id == id).FirstOrDefault().Description_ = desc;
+                ent.Rewards.Where(_ => _.Id == id).FirstOrDefault().Title = title;
+                ent.SaveChanges();
+                return true;
+            }
+        }
         public bool DelReward(int id)
         {
             using (Entities ent = new Entities())
             {
                 ent.Rewards.Remove(ent.Rewards.Where(_ => _.Id == id).FirstOrDefault());
+                ent.SaveChanges();
+                return true;
+            }
+        }
+        public bool AddRewardImage(long id, string filePart)
+        {
+            using (Entities ent = new Entities())
+            {
+                ent.Rewards.Where(_ => _.Id == id).FirstOrDefault().FilePath = filePart;
                 ent.SaveChanges();
                 return true;
             }
